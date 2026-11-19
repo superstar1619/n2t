@@ -1,0 +1,22 @@
+function Main.main 0
+pop local 1
+pop temp 0
+pop temp 0
+push constant 0
+return
+function Main.test 0
+not
+if-goto Main.1
+pop local 4
+pop local 4
+push local 5
+add
+pop local 5
+goto Main.2
+label Main.1
+pop local 2
+pop local 3
+pop local 2
+label Main.2
+push constant 0
+return

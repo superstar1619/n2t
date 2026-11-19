@@ -1,0 +1,237 @@
+function Math.init 0
+push constant 0
+return
+function Math.abs 0
+push argument 0
+push constant 0
+lt
+not
+if-goto Math.1
+push argument 0
+neg
+pop argument 0
+label Math.1
+push argument 0
+return
+function Math.multiply 3
+push constant 1
+pop local 0
+push constant 0
+pop local 1
+push constant 0
+pop local 2
+label Math.2
+push local 2
+push constant 16
+lt
+not
+if-goto Math.3
+push argument 1
+push local 0
+and
+push constant 0
+eq
+not
+not
+if-goto Math.4
+push local 1
+push argument 0
+add
+pop local 1
+label Math.4
+push local 0
+push local 0
+add
+pop local 0
+push argument 0
+push argument 0
+add
+pop argument 0
+push local 2
+push constant 1
+add
+pop local 2
+goto Math.2
+label Math.3
+push local 1
+return
+function Math.divide 2
+push constant 0
+pop local 0
+push argument 0
+push constant 0
+lt
+not
+if-goto Math.5
+push argument 0
+neg
+pop argument 0
+push local 0
+not
+pop local 0
+label Math.5
+push argument 1
+push constant 0
+lt
+not
+if-goto Math.6
+push argument 1
+neg
+pop argument 1
+push local 0
+not
+pop local 0
+label Math.6
+push pointer 0
+push argument 0
+push argument 1
+call Math.mdivide 3
+pop local 1
+push local 0
+not
+if-goto Math.7
+push local 1
+neg
+pop local 1
+label Math.7
+push local 1
+return
+function Math.mdivide 1
+push argument 0
+pop pointer 0
+push argument 2
+push argument 1
+gt
+push argument 2
+push constant 0
+lt
+or
+not
+if-goto Math.8
+push argument 1
+pop static 0
+push constant 0
+return
+label Math.8
+push pointer 0
+push argument 1
+push argument 2
+push argument 2
+add
+call Math.mdivide 3
+pop local 0
+push static 0
+push argument 2
+lt
+not
+if-goto Math.9
+push local 0
+push local 0
+add
+return
+goto Math.10
+label Math.9
+push static 0
+push argument 2
+sub
+pop static 0
+push local 0
+push local 0
+add
+push constant 1
+add
+return
+label Math.10
+function Math.sqrt 4
+push constant 7
+pop local 0
+push constant 0
+pop local 2
+label Math.11
+push local 0
+push constant 0
+gt
+push local 0
+push constant 0
+eq
+or
+not
+if-goto Math.12
+push constant 1
+pop local 3
+push constant 0
+pop local 1
+label Math.13
+push local 1
+push local 0
+lt
+not
+if-goto Math.14
+push local 3
+push local 3
+add
+pop local 3
+push local 1
+push constant 1
+add
+pop local 1
+goto Math.13
+label Math.14
+push local 2
+push local 3
+add
+push local 2
+push local 3
+add
+call Math.multiply 2
+pop local 1
+push local 1
+push argument 0
+gt
+not
+push local 1
+push constant 0
+lt
+not
+and
+not
+if-goto Math.15
+push local 2
+push local 3
+add
+pop local 2
+label Math.15
+push local 0
+push constant 1
+sub
+pop local 0
+goto Math.11
+label Math.12
+push local 2
+return
+function Math.max 0
+push argument 0
+push argument 1
+gt
+not
+if-goto Math.16
+push argument 0
+return
+goto Math.17
+label Math.16
+push argument 1
+return
+label Math.17
+function Math.min 0
+push argument 0
+push argument 1
+lt
+not
+if-goto Math.18
+push argument 0
+return
+goto Math.19
+label Math.18
+push argument 1
+return
+label Math.19

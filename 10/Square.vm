@@ -1,0 +1,103 @@
+function Square.new 3
+push -1 
+call Memory.alloc 1
+pop pointer 0
+pop none 
+pop none 
+pop none 
+pop temp 0
+return
+function Square.dispose 1
+push argument 0
+pop pointer 0
+pop temp 0
+push constant 0
+return
+function Square.draw 1
+push argument 0
+pop pointer 0
+pop temp 0
+pop temp 0
+push constant 0
+return
+function Square.erase 1
+push argument 0
+pop pointer 0
+pop temp 0
+pop temp 0
+push constant 0
+return
+function Square.incSize 1
+push argument 0
+pop pointer 0
+not
+if-goto Square.1
+pop temp 0
+pop none 
+pop temp 0
+label Square.1
+push constant 0
+return
+function Square.decSize 1
+push argument 0
+pop pointer 0
+not
+if-goto Square.2
+pop temp 0
+pop none 
+pop temp 0
+label Square.2
+push constant 0
+return
+function Square.moveUp 1
+push argument 0
+pop pointer 0
+not
+if-goto Square.3
+pop temp 0
+pop temp 0
+pop none 
+pop temp 0
+pop temp 0
+label Square.3
+push constant 0
+return
+function Square.moveDown 1
+push argument 0
+pop pointer 0
+not
+if-goto Square.4
+pop temp 0
+pop temp 0
+pop none 
+pop temp 0
+pop temp 0
+label Square.4
+push constant 0
+return
+function Square.moveLeft 1
+push argument 0
+pop pointer 0
+not
+if-goto Square.5
+pop temp 0
+pop temp 0
+pop none 
+pop temp 0
+pop temp 0
+label Square.5
+push constant 0
+return
+function Square.moveRight 1
+push argument 0
+pop pointer 0
+not
+if-goto Square.6
+pop temp 0
+pop temp 0
+pop none 
+pop temp 0
+pop temp 0
+label Square.6
+push constant 0
+return

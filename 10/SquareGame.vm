@@ -1,0 +1,89 @@
+function SquareGame.new 0
+push -1 
+call Memory.alloc 1
+pop pointer 0
+pop none 
+pop none 
+return
+function SquareGame.dispose 1
+push argument 0
+pop pointer 0
+pop temp 0
+pop temp 0
+push constant 0
+return
+function SquareGame.moveSquare 1
+push argument 0
+pop pointer 0
+not
+if-goto SquareGame.1
+pop temp 0
+label SquareGame.1
+not
+if-goto SquareGame.2
+pop temp 0
+label SquareGame.2
+not
+if-goto SquareGame.3
+pop temp 0
+label SquareGame.3
+not
+if-goto SquareGame.4
+pop temp 0
+label SquareGame.4
+pop temp 0
+push constant 0
+return
+function SquareGame.run 1
+push argument 0
+pop pointer 0
+pop local 2
+label SquareGame.5
+not
+if-goto SquareGame.6
+label SquareGame.7
+not
+if-goto SquareGame.8
+pop local 1
+pop temp 0
+goto SquareGame.7
+label SquareGame.8
+not
+if-goto SquareGame.9
+pop local 2
+label SquareGame.9
+not
+if-goto SquareGame.10
+pop temp 0
+label SquareGame.10
+not
+if-goto SquareGame.11
+pop temp 0
+label SquareGame.11
+not
+if-goto SquareGame.12
+pop none 
+label SquareGame.12
+not
+if-goto SquareGame.13
+pop none 
+label SquareGame.13
+not
+if-goto SquareGame.14
+pop none 
+label SquareGame.14
+not
+if-goto SquareGame.15
+pop none 
+label SquareGame.15
+label SquareGame.16
+not
+if-goto SquareGame.17
+pop local 1
+pop temp 0
+goto SquareGame.16
+label SquareGame.17
+goto SquareGame.5
+label SquareGame.6
+push constant 0
+return
